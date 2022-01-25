@@ -1,7 +1,7 @@
-var scaleX=(window.innerHeight/722)*100;
+var scale=(window.innerHeight/722);
 const text=document.getElementsByClassName("textContainer");
 for(t of text){
-    t.style.fontSize=scaleX+"%";
+    t.style.fontSize=t.style.fontSize*scale+"em";
     //document.getElementById("hi").innerHTML=window.innerHeight;
 }
 var score=0;
