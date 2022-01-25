@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Multitasking</title>
         <link rel="icon" type="image/png" href="multitaskGamePic.png"/>
     </head>
     <body>
         <div id="backgroundGrid" style="position: absolute; left: 0%; top: 0%; width: 100%; height: 100%; background-color: rgb(198, 199, 199);"></div>
-        <div id="grid" style="position: absolute; left: 1.25%; top: 1%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%;">
+        <div class="textContainer" id="grid" style="position: absolute; left: 1.25%; top: 1%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%;">
             <strong><span id="name" style="opacity: 0; transition: opacity 1s;">Avoid At All Costs</span></strong>
         </div>
-        <div id="gridFruit" style="position: absolute; left: 50.75%; top: 1%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%; display: none;">
+        <div class="textContainer" id="gridFruit" style="position: absolute; left: 50.75%; top: 1%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%; display: none;">
             <strong><span id="nameFruit" style="opacity: 0; transition: opacity 1s;">Falling Collections</span></strong>
             <span id="losePoint" style="position: absolute; right: 0%;"></span>
         </div>
-        <div id="gridPing" style="position: absolute; left: 1.25%; top: 50.75%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%; display: none;">
+        <div class="textContainer" id="gridPing" style="position: absolute; left: 1.25%; top: 50.75%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%; display: none;">
             <strong><span id="namePing" style="opacity: 0; transition: opacity 1s;">Ping Pong</span></strong>
         </div>
-        <div id="gridSpace" style="position: absolute; left: 50.75%; top: 50.75%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%; display: none;">
+        <div class="textContainer" id="gridSpace" style="position: absolute; left: 50.75%; top: 50.75%; width: 48%; height: 48%; background-color: rgb(126, 226, 193); border: black 2px solid; text-align: center; font-size: 150%; display: none;">
             <strong><span id="nameSpace" style="opacity: 0; transition: opacity 1s;">Perfect Timing</span></strong><br><br>
             <h1>Your Goal: <span id="goalNum"></span></h1>
             <h2>Current Number: <span id="num"></span></h2>
@@ -28,15 +30,15 @@
         <canvas id="ballCanvas" style="position: absolute;"></canvas>
         <!--Announce the time for transitioning the special effects-->
         <div id="announcementPage" style="position: absolute; width: 30%; height: 40%; left: 35%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; color: white; transition: bottom 0.5s;">
-            <br><br><br><br><strong><span id="announcement" style="font-size: 200%;">s</span></strong><br><br>
-            <span id="time" style="font-size: 350%;">s</span>
+            <br><br><br><br><strong><span class="textContainer" id="announcement" style="font-size: 200%;">s</span></strong><br><br>
+            <span class="textContainer" id="time" style="font-size: 350%;">s</span>
         </div>
         <!--Pulls down score page to see current score-->
-        <div id="scorePage" style="position: absolute; width: 20%; height: 10%; left: 40%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; font-size: 180%; color: white; transition: bottom 0.5s;">
+        <div class="textContainer" id="scorePage" style="position: absolute; width: 20%; height: 10%; left: 40%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; font-size: 180%; color: white; transition: bottom 0.5s;">
             <strong>Your Current Score:</strong><br>
             <span id="score"></span>
         </div>
-        <div id="intro" style="position: absolute; left: 0%; bottom: 0%; width: 100%; height: 100%; background-color: beige; font-size: 150%; text-align: center;">
+        <div class="textContainer" id="intro" style="position: absolute; left: 0%; bottom: 0%; width: 100%; height: 100%; background-color: beige; font-size: 150%; text-align: center;">
             <br><br><h2>Multitasking</h2><br>
             As you progresses, the game becomes more difficult, requiring perfect coordination and<br>
             cooperation from both your body and your minds. Good luck trying.<br><br>
@@ -51,7 +53,7 @@
             <br><br><strong>Press NEXT to play the game</strong><br><br>
             <button style="width: 200px; height: 100px; background-color: rgb(241, 183, 94);" onclick="nextGame();"><strong>NEXT</strong></button>
         </div>
-        <div id="losingPage" style="position: absolute; width: 40%; height: 40%; left: 30%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; font-size: 150%; color: white; transition: bottom 1s;">
+        <div class="textContainer" id="losingPage" style="position: absolute; width: 40%; height: 40%; left: 30%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; font-size: 150%; color: white; transition: bottom 1s;">
             <br><strong>Oops! You lost!<br>
             Pay closer attention to each game next time.<br>
             Click "Restart" to restart the game.<br>
