@@ -30,11 +30,11 @@
         <canvas id="ballCanvas" style="position: absolute;"></canvas>
         <!--Announce the time for transitioning the special effects-->
         <div id="announcementPage" style="position: absolute; width: 30%; height: 40%; left: 35%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; color: white; transition: bottom 0.5s;">
-            <br><br><br><br><strong><span class="textContainer" id="announcement" style="font-size: 2em;">s</span></strong><br><br>
-            <span class="textContainer" id="time" style="font-size: 3.5em;">s</span>
+            <br><br><br><br><strong><span id="announcement" style="font-size: 2em;">s</span></strong><br><br>
+            <span id="time" style="font-size: 3.5em;">s</span>
         </div>
         <!--Pulls down score page to see current score-->
-        <div class="textContainer" id="scorePage" style="position: absolute; width: 20%; height: 10%; left: 40%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; font-size: 1.8em; color: white; transition: bottom 0.5s;">
+        <div id="scorePage" style="position: absolute; width: 20%; height: 10%; left: 40%; bottom: 100%; background-color: rgba(0,0,0,0.75); text-align: center; font-size: 1.8em; color: white; transition: bottom 0.5s;">
             <strong>Your Current Score:</strong><br>
             <span id="score"></span>
         </div>
