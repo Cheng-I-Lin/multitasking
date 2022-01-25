@@ -7,6 +7,11 @@ for(t of text){
 document.getElementById("announcement").style.fontSize=scale*2+"em";
 document.getElementById("time").style.fontSize=scale*3.5+"em";
 document.getElementById("scorePage").style.fontSize=scale*1.8+"em";
+var buttons=document.getElementsByClassName("button");
+for(b of buttons){
+    b.style.width=b.offsetWidth*scale+"px";
+    b.style.height=b.offsetHeight*scale+"px";
+}
 var score=0;
 var player={
     x:0,
